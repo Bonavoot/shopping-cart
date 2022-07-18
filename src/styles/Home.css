@@ -9,46 +9,6 @@ body {
   align-items: center;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 4px 2px;
-  border-bottom: 1px black solid;
-  position: fixed;
-  top: 0px;
-}
-
-nav {
-  display: flex;
-  gap: 100px;
-  padding-top: 20px;
-  margin-right: 125px;
-}
-a {
-  text-decoration: none;
-  font-weight: 600;
-  color: rgb(20, 20, 20);
-  padding: 0px 5px;
-}
-
-img[alt="logo"] {
-  height: 60px;
-  width: auto;
-  margin-left: 15px;
-}
-
-img[alt="cart"] {
-  height: 35px;
-  width: auto;
-  position: absolute;
-  right: 50px;
-  top: 28px;
-}
-
 img[alt="kitchen"] {
   width: 1920px;
   height: 100vh;
@@ -65,8 +25,9 @@ img[alt="kitchen"] {
 }
 
 p {
-  width: 500px;
-  font-size: 18pt;
+  width: 400px;
+  font-size: 14pt;
+  font-weight: 300;
   padding: 30px;
   text-align: center;
   color: rgb(255, 255, 255);
