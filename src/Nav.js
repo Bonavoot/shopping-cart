@@ -6,7 +6,9 @@ import logo from "./images/full-logo.png";
 const Nav = () => {
   return (
     <nav>
-      <img src={logo} alt="logo" />
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
       <div className="links">
         <Link to="/shop">
           <li>SHOP</li>

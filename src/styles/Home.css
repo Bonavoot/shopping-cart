@@ -17,6 +17,7 @@ img[alt="kitchen"] {
 .welcome {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: absolute;
   left: 70px;
   top: 300px;
@@ -24,7 +25,7 @@ img[alt="kitchen"] {
   background-color: rgb(0, 0, 0, 0.8);
 }
 
-p {
+.welcome p {
   width: 400px;
   font-size: 14pt;
   font-weight: 300;
@@ -35,6 +36,7 @@ p {
 }
 
 .shop-btn {
+  width: 250px;
   font-family: "Cormorant SC", serif;
   font-size: 18pt;
   border: none;
@@ -43,7 +45,5 @@ p {
   color: white;
   cursor: pointer;
   border: gray 3px solid;
-  position: absolute;
-  bottom: -30px;
-  left: 29%;
+  margin-bottom: -40px;
 }
