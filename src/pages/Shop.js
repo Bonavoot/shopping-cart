@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Products from "../components/Products.js";
 
 const Shop = () => {
-  const [category, setCategory] = useState("bathroom");
+  const [category, setCategory] = useState("BATHROOM");
 
   const handleCategoryClick = (e) => {
     setCategory(e.target.textContent);
@@ -12,7 +12,9 @@ const Shop = () => {
     <div className="shop-container">
       <h2>CATEGORIES</h2>
       <ul>
-        <li onClick={handleCategoryClick}>BATHROOM</li>
+        <li className={category} onClick={handleCategoryClick}>
+          BATHROOM
+        </li>
         <li onClick={handleCategoryClick}>KITCHEN</li>
         <li onClick={handleCategoryClick}>LIVING ROOM</li>
         <li onClick={handleCategoryClick}>OFFICE</li>

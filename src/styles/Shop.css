@@ -9,7 +9,7 @@
 
 .shop-container h2 {
   margin-left: 15px;
-  border-left: black solid 5px;
+  border-left: rgb(49, 49, 49) solid 5px;
   padding-left: 10px;
 }
 
@@ -23,7 +23,8 @@
 }
 
 .shop-container li:hover {
-  background-color: rgba(0, 0, 0, 0.486);
+  background-color: rgb(20, 20, 20);
+  color: white;
 }
 
 .product-container {
@@ -37,12 +38,13 @@
 .product-container h4 {
   color: green;
 }
+
 .product-container h1 {
   position: absolute;
   text-align: left;
   top: -100px;
   width: 1160px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(49, 49, 49);
 }
 
 .product-container img {

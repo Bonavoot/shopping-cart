@@ -54,7 +54,3 @@ const Products = (category) => {
 };
 
 export default Products;
-
-// on click, products change based on clicked name.
-// Will render info in object using map(?)
-//

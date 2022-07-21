@@ -17,14 +17,23 @@ nav {
   display: flex;
   gap: 60px;
   margin-right: 100px;
+}
+
+.links li {
   list-style: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(20, 20, 20);
+}
+
+.links li:hover {
+  background-color: rgb(20, 20, 20);
+  color: white;
 }
 
 a {
   text-decoration: none;
-  font-weight: 600;
-  color: rgb(20, 20, 20);
-  padding: 0px 5px;
 }
 
 img[alt="logo"] {
@@ -38,6 +47,6 @@ img[alt="cart"] {
   width: auto;
   position: absolute;
   right: 50px;
-  top: 28px;
+  top: 30px;
   cursor: pointer;
 }
