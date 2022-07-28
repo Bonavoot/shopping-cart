@@ -13,13 +13,15 @@ const Nav = () => {
         <Link to="/shop">
           <li>SHOP</li>
         </Link>
-        <Link to="/aboutus">
+        <Link to="/about">
           <li>ABOUT US</li>
         </Link>
         <Link to="/contact">
           <li>CONTACT</li>
         </Link>
-        <img src={cartLogo} alt="cart" />
+        <Link to={"/cart"}>
+          <img src={cartLogo} alt="cart" />
+        </Link>
       </div>
     </nav>
   );

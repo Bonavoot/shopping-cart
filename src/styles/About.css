@@ -1,0 +1,17 @@
+.about-title {
+  font-family: "Cormorant SC", serif;
+  font-size: 34pt;
+  color: rgb(255, 255, 255);
+  margin-top: -10px;
+}
+
+.about-us {
+  position: absolute;
+  top: 200px;
+  left: 33%;
+  width: 500px;
+  font-size: 14pt;
+  color: rgb(255, 255, 255);
+  background-color: rgb(10, 10, 10);
+  padding: 45px 75px;
+}

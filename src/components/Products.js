@@ -46,7 +46,7 @@ const Products = (category) => {
           <img src={item.img} alt={item.name} />
           <h3>{item.name}</h3>
           <h4>{item.price}</h4>
-          <AddToCart />
+          <AddToCart props={item} />
         </div>
       ))}
     </div>

@@ -4,7 +4,8 @@ import homeBKG from "../images/home-bkg.jpg";
 const linkStyle = {
   margin: "1rem",
   textDecoration: "none",
-  color: "white",
+  color: "black",
+  fontWeight: 900,
 };
 
 const Home = () => {
@@ -14,9 +15,10 @@ const Home = () => {
         <img src={homeBKG} alt="kitchen" />
         <div className="welcome">
           <p>
-            IN BUSINESS FOR OVER <em>30 YEARS</em> THE NUNZIO & SONS FAMILY
-            WELCOMES ALL NEW AND FAMILIAR FACES TO VIEW OUR IMPRESSIVE VARIETY
-            OF GRANITE AND MARBLE TO MAKE YOUR HOME SPECTACULAR{" "}
+            <em>
+              "Business has been thriving since the 80's, but the greatest
+              success started with family" - Nunzio
+            </em>
           </p>
           <button className="shop-btn">
             <Link to="/shop" style={linkStyle}>

@@ -1,0 +1,26 @@
+.contact-title {
+  font-family: "Cormorant SC", serif;
+  color: black;
+  font-size: 34pt;
+}
+
+.contact {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  color: white;
+}
+
+p a,
+.email {
+  color: white;
+  font-size: 18pt;
+  padding: 10px 20px;
+  background-color: black;
+}
+
+.email {
+  top: 50px;
+  left: -25px;
+  width: 250px;
+}

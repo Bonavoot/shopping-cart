@@ -1,35 +1,21 @@
 import React, { useState } from "react";
+import ShoppingCart from "../pages/ShoppingCart";
 
-const AddToCart = () => {
-  const [quantity, setQuantity] = useState(0);
+const AddToCart = (products) => {
+  const [cartQuantity, setCartQuantity] = useState(0);
 
-  const incrementQuantity = () => {
-    setQuantity(quantity + 1);
-  };
+  console.log(products.props.price);
 
-  const decrementQuantity = () => {
-    setQuantity(quantity - 1);
-  };
-
-  const handleOnChange = (e) => {
-    setQuantity(e.target.value);
+  console.log(cartQuantity);
+  const handleAddToCartButton = () => {
+    <ShoppingCart />;
+    setCartQuantity(cartQuantity + 1);
+    console.log(cartQuantity);
   };
 
   return (
     <>
-      <div className="cart-buttons">
-        <button onClick={decrementQuantity}>-</button>
-        <label htmlFor="quantity">
-          <input
-            name="quantity"
-            pattern="^[0-99]*$"
-            value={quantity}
-            onChange={handleOnChange}
-          ></input>
-        </label>
-        <button onClick={incrementQuantity}>+</button>
-      </div>
-      <button>Add to Cart</button>
+      <button onClick={handleAddToCartButton}>Add to Cart</button>
     </>
   );
 };
