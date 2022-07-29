@@ -7,6 +7,7 @@ import "./styles/Nav.css";
 import "./styles/Shop.css";
 import "./styles/About.css";
 import "./styles/Contact.css";
+import "./styles/ShoppingCart.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

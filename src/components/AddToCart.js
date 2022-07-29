@@ -1,16 +1,13 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import ShoppingCart from "../pages/ShoppingCart";
 
 const AddToCart = (products) => {
-  const [cartQuantity, setCartQuantity] = useState(0);
+  // const { name, price } = products.props;
+  let quant = products.props.quant;
 
-  console.log(products.props.price);
-
-  console.log(cartQuantity);
   const handleAddToCartButton = () => {
+    quant = quant + 1;
     <ShoppingCart />;
-    setCartQuantity(cartQuantity + 1);
-    console.log(cartQuantity);
   };
 
   return (

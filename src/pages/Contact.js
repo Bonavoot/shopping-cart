@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <>
-      <p className="contact">
+      <div className="contact">
         <h1 className="contact-title">CONTACT INFO</h1>
         <a target="_blank" href="https://github.com/Bonavoot" rel="noreferrer">
           GitHub
@@ -14,7 +14,7 @@ const Contact = () => {
           LinkedIn
         </a>
         <p className="email">Jbonventre95@gmail.com</p>
-      </p>
+      </div>
     </>
   );
 };

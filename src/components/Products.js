@@ -9,19 +9,26 @@ import AddToCart from "./AddToCart";
 
 // Products
 const bathroom = [
-  { name: "Vanity", price: "$" + 149.99, img: vanityImg },
-  { name: "Double Sink Vanity", price: "$" + 299.95, img: doubleSinkVanity },
-  { name: "Bathtub", price: "$" + 199.99, img: bathtubImg },
+  { name: "Vanity", price: 149.99, quant: 0, img: vanityImg },
+  {
+    name: "Double Sink Vanity",
+    price: 299.95,
+    quant: 0,
+    img: doubleSinkVanity,
+  },
+  { name: "Bathtub", price: 199.99, quant: 0, img: bathtubImg },
 ];
 
 const kitchen = [
-  { name: "Counter Top", price: "$" + 349.99, img: kitchenImg },
-  { name: "Island", price: "$" + 599.99, img: island },
+  { name: "Counter Top", price: 349.99, quant: 0, img: kitchenImg },
+  { name: "Island", price: 599.99, quant: 0, img: island },
 ];
-const livingroom = [{ name: "Fireplace", price: "$" + 799.99, img: fireplace }];
+const livingroom = [
+  { name: "Fireplace", price: 799.99, quant: 0, img: fireplace },
+];
 
 const office = [
-  { name: "Conference Table", price: "$" + 999.99, img: conference },
+  { name: "Conference Table", price: 999.99, quant: 0, img: conference },
 ];
 
 const Products = (category) => {
@@ -45,7 +52,7 @@ const Products = (category) => {
         <div key={item.name}>
           <img src={item.img} alt={item.name} />
           <h3>{item.name}</h3>
-          <h4>{item.price}</h4>
+          <h4>{"$" + item.price}</h4>
           <AddToCart props={item} />
         </div>
       ))}
