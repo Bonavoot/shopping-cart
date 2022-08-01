@@ -5,7 +5,8 @@ import kitchenImg from "../images/kitchen-counter.jpg";
 import island from "../images/island.jpg";
 import fireplace from "../images/fireplace.png";
 import conference from "../images/conference.jpg";
-import AddToCart from "./AddToCart";
+import Cart from "../pages/Cart";
+import React, { useEffect, useState } from "react";
 
 // Products
 const bathroom = [
@@ -32,7 +33,17 @@ const office = [
 ];
 
 const Products = (category) => {
+  const [cartQuantity, setCartQuantity] = useState(0);
   let picked = bathroom;
+
+  function addToCart() {
+    setCartQuantity(cartQuantity + 1);
+  }
+
+  useEffect(() => {
+    console.log("this ran");
+    <Cart cartQuantity={cartQuantity} />;
+  }, [cartQuantity]);
 
   // Displays the clicked category
   if (category.props === "OFFICE") {
@@ -53,7 +64,7 @@ const Products = (category) => {
           <img src={item.img} alt={item.name} />
           <h3>{item.name}</h3>
           <h4>{"$" + item.price}</h4>
-          <AddToCart props={item} />
+          <button onClick={addToCart}>Add to Cart</button>
         </div>
       ))}
     </div>
