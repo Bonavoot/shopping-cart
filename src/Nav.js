@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cartLogo from "./images/cart.png";
 import logo from "./images/full-logo.png";
 
 const Nav = () => {
@@ -18,9 +17,6 @@ const Nav = () => {
         </Link>
         <Link to="/contact">
           <li>CONTACT</li>
-        </Link>
-        <Link to={"/cart"}>
-          <img src={cartLogo} alt="cart" />
         </Link>
       </div>
     </nav>

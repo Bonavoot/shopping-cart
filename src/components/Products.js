@@ -5,10 +5,50 @@ import kitchenImg from "../images/kitchen-counter.jpg";
 import island from "../images/island.jpg";
 import fireplace from "../images/fireplace.png";
 import conference from "../images/conference.jpg";
-import Cart from "../pages/Cart";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-// Products
+let productsAddedToCart = [];
+
+const Products = (category) => {
+  const [cartQuantity, setCartQuantity] = useState(0);
+  let pickedCategory = bathroom;
+
+  // Stores data for Add to Cart button
+  function addToCart({ name, price }) {
+    setCartQuantity(cartQuantity + 1);
+    productsAddedToCart.push({ name, price });
+  }
+
+  console.log(productsAddedToCart);
+  // Renders clicked category
+  if (category.props === "OFFICE") {
+    pickedCategory = office;
+  } else if (category.props === "BATHROOM") {
+    pickedCategory = bathroom;
+  } else if (category.props === "LIVING ROOM") {
+    pickedCategory = livingroom;
+  } else if (category.props === "KITCHEN") {
+    pickedCategory = kitchen;
+  }
+
+  return (
+    <div className="product-container">
+      <h1>{category.props}</h1>
+      {pickedCategory.map((item) => (
+        <div key={item.name}>
+          <img src={item.img} alt={item.name} />
+          <h3>{item.name}</h3>
+          <h4>{"$" + item.price}</h4>
+          <button onClick={() => addToCart(item)}>Add to Cart</button>
+        </div>
+      ))}
+
+      <button className="cart-button">{cartQuantity}</button>
+    </div>
+  );
+};
+
+// Product data
 const bathroom = [
   { name: "Vanity", price: 149.99, quant: 0, img: vanityImg },
   {
@@ -31,44 +71,5 @@ const livingroom = [
 const office = [
   { name: "Conference Table", price: 999.99, quant: 0, img: conference },
 ];
-
-const Products = (category) => {
-  const [cartQuantity, setCartQuantity] = useState(0);
-  let picked = bathroom;
-
-  function addToCart() {
-    setCartQuantity(cartQuantity + 1);
-  }
-
-  useEffect(() => {
-    console.log("this ran");
-    <Cart cartQuantity={cartQuantity} />;
-  }, [cartQuantity]);
-
-  // Displays the clicked category
-  if (category.props === "OFFICE") {
-    picked = office;
-  } else if (category.props === "BATHROOM") {
-    picked = bathroom;
-  } else if (category.props === "LIVING ROOM") {
-    picked = livingroom;
-  } else if (category.props === "KITCHEN") {
-    picked = kitchen;
-  }
-
-  return (
-    <div className="product-container">
-      <h1>{category.props}</h1>
-      {picked.map((item) => (
-        <div key={item.name}>
-          <img src={item.img} alt={item.name} />
-          <h3>{item.name}</h3>
-          <h4>{"$" + item.price}</h4>
-          <button onClick={addToCart}>Add to Cart</button>
-        </div>
-      ))}
-    </div>
-  );
-};
 
 export default Products;
