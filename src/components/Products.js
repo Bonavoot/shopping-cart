@@ -11,6 +11,7 @@ let productsAddedToCart = [];
 
 const Products = (category) => {
   const [cartQuantity, setCartQuantity] = useState(0);
+  const [checkout, setCheckout] = useState("hide");
   let pickedCategory = bathroom;
 
   // Stores data for Add to Cart button
@@ -19,7 +20,16 @@ const Products = (category) => {
     productsAddedToCart.push({ name, price });
   }
 
+  function handleCartOnClick() {
+    if (checkout === "hide") {
+      setCheckout("show");
+    } else {
+      setCheckout("hide");
+    }
+  }
+
   console.log(productsAddedToCart);
+
   // Renders clicked category
   if (category.props === "OFFICE") {
     pickedCategory = office;
@@ -43,7 +53,15 @@ const Products = (category) => {
         </div>
       ))}
 
-      <button className="cart-button">{cartQuantity}</button>
+      <button onClick={handleCartOnClick} className="cart-button">
+        {cartQuantity}
+      </button>
+      {checkout === "show" &&
+        productsAddedToCart.map((item) => (
+          <div>
+            {item.name} {item.price}
+          </div>
+        ))}
     </div>
   );
 };
